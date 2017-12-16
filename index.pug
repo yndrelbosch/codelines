@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Codelines
+    link(rel='stylesheet' href='assets/css/main.min.css')
+  body
+    ul.nav
+      div.nav-wrapper
+        span.nav-heading TOC
+        ul.nav-list.unstyled-list
+          li.nav-item
+            a.nav-link(data-scroll href='#getting-started') Getting Started
+          li.nav-item
+            a.nav-link(data-scroll href='#css') CSS
+    article.scrollable
+      h1#codelines Codelines
+      p.subtitle A Code Style Guideline
+      section
+        p This document was written to keep the code written for all my projects consistent, thus saying, it is for personal use, althought you may find it useful as well.
+        p I decided to use the Tufte CSS theme framework for this document because it is easily legible, and lends well to code documentation. Credits for this theme must go to Edward Tufte, after whom the theme is named, and the developer of the code, based upon Tufte's works.
+        p The original CSS for this theme can be found here on <a href="githubURL">GitHub</a>. I simply converted the theme to stylus and added a few personal touches.
+        p My contribution to this theme mainly involves adding navigation to the document and a few minor touches here and there. Which, sadly, does not appear to work on mobile devices, yet.
+      section
+        h2#getting-started Getting Started
+        p
+          span.newthought To start out
+          | , I will discuss a few things that will remain the same no matter what type of code I'm writing.
+        p It doesn't matter whether I'm working on HTML, CSS, JS, PHP, or anything else, certain things will be done certain ways; for example...
+        ul
+          li Soft tabs of 2 spaces.
+          li Remove trailing white space.
+      section
+        h2#css CSS
+        p I, personally hate plain css, I have never used plain CSS in any projec. I prefer preprocessors such as less, sass, or stylus. so they are what I will discuss.
+        p Some things, however, are failry universal across all languages, for example...
+        ul
+          li CSS should be kept as DRY as possible.
+          li Similar code should be kept in the same locations, like...
+          ul
+            li Styles for all button elements should be kept in a single location.
+            li Styles for links should be kept together.
+        h3#sass Sass
+        p I never use original Sass, if I want a whitespace dependent preprocessor, I go with Stylus. The version of Sass that I do use is called SCSS, and, just like normal CSS, it requires proper punctuation.
+        p The file structure for my SCSS files varies depending on the complexity of the project I'm working on, but will always have these basics:
+        br
+        p Where the first list item is the main scss folder, inside which all scss files should go. All files that get included into another scss file should begin with '_' for it's name.
+    script(src='assets/js/jquery.min.js')
+    script(src='assets/js/smooth-scroll.min.js')
+    script var scroll = new SmoothScroll('a[href*="#"]');

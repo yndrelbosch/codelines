@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Codelines</title>
+    <link rel="stylesheet" href="assets/css/main.min.css">
+  </head>
+  <body>
+    <ul class="nav">
+      <div class="nav-wrapper"><span class="nav-heading">TOC</span>
+        <ul class="nav-list unstyled-list">
+          <li class="nav-item"><a class="nav-link" data-scroll href="#getting-started">Getting Started</a></li>
+          <li class="nav-item"><a class="nav-link" data-scroll href="#css">CSS</a></li>
+        </ul>
+      </div>
+    </ul>
+    <article class="scrollable">
+      <h1 id="codelines">Codelines</h1>
+      <p class="subtitle">A Code Style Guideline</p>
+      <section>
+        <p>This document was written to keep the code written for all my projects consistent, thus saying, it is for personal use, althought you may find it useful as well.</p>
+        <p>I decided to use the Tufte CSS theme framework for this document because it is easily legible, and lends well to code documentation. Credits for this theme must go to Edward Tufte, after whom the theme is named, and the developer of the code, based upon Tufte's works.</p>
+        <p>The original CSS for this theme can be found here on <a href="githubURL">GitHub</a>. I simply converted the theme to stylus and added a few personal touches.</p>
+        <p>My contribution to this theme mainly involves adding navigation to the document and a few minor touches here and there. Which, sadly, does not appear to work on mobile devices, yet.</p>
+      </section>
+      <section>
+        <h2 id="getting-started">Getting Started</h2>
+        <p><span class="newthought">To start out</span>, I will discuss a few things that will remain the same no matter what type of code I'm writing.</p>
+        <p>It doesn't matter whether I'm working on HTML, CSS, JS, PHP, or anything else, certain things will be done certain ways; for example...</p>
+        <ul>
+          <li>Soft tabs of 2 spaces.</li>
+          <li>Remove trailing white space.</li>
+        </ul>
+      </section>
+      <section>
+        <h2 id="css">CSS</h2>
+        <p>I, personally hate plain css, I have never used plain CSS in any projec. I prefer preprocessors such as less, sass, or stylus. so they are what I will discuss.</p>
+        <p>Some things, however, are failry universal across all languages, for example...</p>
+        <ul>
+          <li>CSS should be kept as DRY as possible.</li>
+          <li>Similar code should be kept in the same locations, like...</li>
+          <ul>
+            <li>Styles for all button elements should be kept in a single location.</li>
+            <li>Styles for links should be kept together.</li>
+          </ul>
+        </ul>
+        <h3 id="sass">Sass</h3>
+        <p>I never use original Sass, if I want a whitespace dependent preprocessor, I go with Stylus. The version of Sass that I do use is called SCSS, and, just like normal CSS, it requires proper punctuation.</p>
+        <p>The file structure for my SCSS files varies depending on the complexity of the project I'm working on, but will always have these basics:</p><br>
+        <p>Where the first list item is the main scss folder, inside which all scss files should go. All files that get included into another scss file should begin with '_' for it's name.</p>
+      </section>
+    </article>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/smooth-scroll.min.js"></script>
+    <script>var scroll = new SmoothScroll('a[href*="#"]');</script>
+  </body>
+</html>

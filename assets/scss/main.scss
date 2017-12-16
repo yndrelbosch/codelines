@@ -1,0 +1,77 @@
+@import 'bourbon/bourbon';
+@import 'var';
+@import 'mixins';
+@import 'nav-font';
+@import 'latex';
+@import 'tufte';
+
+.nav {
+  position: relative;
+  float: right;
+  min-width: 250px;
+  display: inline-block;
+  z-index: 1000;
+
+  &.fixed .nav-wrapper {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+.nav-wrapper {
+  border: 1px solid saturate(shade($bg, 20%), 35%);
+  background-color: saturate(tint($bg, 7%), 5%);
+  border-radius: 6px;
+  padding: 10px 5px;
+}
+
+.nav-heading {
+  border-bottom: 2px solid $color;
+  color: $color;
+  display: block;
+  font-family: "Alfa Slab One", Georgia, serif;
+  font-size: 1em;
+  margin-bottom: 15px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.nav-list {
+  @extend .unstyled-list;
+  margin-left: 15px;
+  margin-bottom: 0;
+  width: 125px;
+}
+
+.nav-item {
+  font-size: 18px;
+  line-height: 1.2em;
+  margin: 0 auto;
+
+  &.active {
+    @include transform( scale(1.5, 1.5) );
+  }
+}
+
+.nav-link {
+  color: $color !important;
+  display: block;
+  margin: 0 auto;
+  background: none !important;
+  text-shadow: none !important;
+  text-align: center;
+}
+
+.nav-sub-item {
+  color: $color !important;
+  list-style: none;
+  font-size: 18px;
+  font-style: oblique;
+}
+
+.dashed-list {
+  list-style: disc;
+}
